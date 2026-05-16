@@ -1,0 +1,183 @@
+Quiero crear una aplicación web fullstack moderna usando Next.js + Supabase + TailwindCSS.
+
+La aplicación será un gestor de sitios web pendientes por visitar.
+
+OBJETIVO:
+Permitir que un usuario guarde sitios web, los marque como visitados y administre su lista de seguimiento.
+
+STACK TECNOLÓGICO:
+- Next.js App Router
+- TypeScript
+- TailwindCSS
+- Supabase
+- PostgreSQL
+- Deploy preparado para Vercel
+
+REQUISITOS GENERALES:
+- Código limpio y modular
+- Diseño responsive
+- UI moderna y minimalista
+- Componentes reutilizables
+- Variables de entorno para credenciales
+- Preparado para producción
+- Buen manejo de estados
+- Buen manejo de errores
+- Loading states
+- Confirmaciones visuales
+- Código comentado
+
+AUTENTICACIÓN:
+Implementar autenticación con Supabase:
+- login
+- registro
+- logout
+- persistencia de sesión
+- rutas protegidas
+
+ESTRUCTURA DE LA BASE DE DATOS:
+
+Tabla: sitios_web
+
+Campos:
+- id (uuid, primary key)
+- user_id (uuid)
+- nombre (text)
+- url (text)
+- descripcion (text, opcional)
+- categoria (text, opcional)
+- visitado (boolean)
+- fecha_visita (timestamp, opcional)
+- created_at (timestamp)
+
+Crear políticas RLS para que cada usuario vea solo sus datos.
+
+FUNCIONALIDADES:
+
+1. Dashboard principal
+- mostrar listado de sitios
+- mostrar cantidad total
+- mostrar cantidad visitados
+- mostrar cantidad pendientes
+
+2. Agregar sitio
+Formulario con:
+- nombre
+- URL
+- descripción
+- categoría
+
+Validaciones:
+- URL válida
+- campos requeridos
+- evitar duplicados
+
+3. Editar sitio
+Permitir modificar:
+- nombre
+- URL
+- descripción
+- categoría
+
+4. Eliminar sitio
+- confirmación antes de borrar
+
+5. Marcar como visitado
+- botón toggle
+- guardar fecha de visita automática
+- feedback visual inmediato
+
+6. Filtros
+- todos
+- visitados
+- pendientes
+
+7. Búsqueda
+- buscar por nombre
+- buscar por URL
+
+8. Ordenamiento
+- más recientes
+- alfabético
+- visitados primero
+
+9. UI/UX
+- usar TailwindCSS
+- diseño moderno tipo dashboard
+- tarjetas limpias
+- iconos
+- navbar
+- sidebar opcional
+- dark mode
+
+10. Extras opcionales
+- favicon automático del sitio
+- preview del dominio
+- categorías con colores
+- estadísticas simples
+- animaciones suaves
+
+ESTRUCTURA DEL PROYECTO:
+
+/app
+/components
+/lib
+/services
+/hooks
+/types
+/styles
+
+REQUISITOS TÉCNICOS:
+- usar Server Components cuando sea posible
+- usar Client Components solo donde sea necesario
+- usar acciones server o API routes
+- tipado completo con TypeScript
+- hooks personalizados
+- manejo centralizado de Supabase
+- separar lógica de UI
+
+CONFIGURACIÓN:
+Incluir:
+- archivo .env.example
+- instrucciones de instalación
+- instrucciones para Supabase
+- instrucciones para deploy en Vercel
+
+DEPENDENCIAS:
+Instalar automáticamente:
+- @supabase/supabase-js
+- @supabase/auth-helpers-nextjs
+- lucide-react
+- clsx
+- tailwind-merge
+
+DISEÑO:
+Quiero una interfaz moderna similar a:
+- Notion
+- Linear
+- Trello minimalista
+
+PÁGINAS:
+- /login
+- /register
+- /dashboard
+- /sitios/[id]
+
+REQUISITOS IMPORTANTES:
+- El proyecto debe funcionar inmediatamente después de configurar las variables de entorno.
+- No usar código obsoleto.
+- Usar mejores prácticas actuales de Next.js.
+- Optimizar para rendimiento.
+- Preparar para escalabilidad futura.
+
+ENTREGAR:
+- estructura completa
+- código completo
+- SQL de Supabase
+- políticas RLS
+- instrucciones paso a paso
+- componentes completos
+- estilos completos
+- configuración completa
+
+Además:
+Generar una UI moderna y profesional con excelente experiencia de usuario.
