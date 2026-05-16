@@ -1,7 +1,8 @@
 import { createServerClient } from '@supabase/ssr'
 import { NextResponse, type NextRequest } from 'next/server'
 
-export async function middleware(request: NextRequest) {
+// Función renombrada de middleware a proxy (Next.js 16+)
+export async function proxy(request: NextRequest) {
   // Guard: si faltan las variables de entorno, dejar pasar sin error
   if (
     !process.env.NEXT_PUBLIC_SUPABASE_URL ||
@@ -52,7 +53,6 @@ export async function middleware(request: NextRequest) {
 
     return supabaseResponse
   } catch {
-    // En caso de error inesperado, dejar pasar la request
     return NextResponse.next()
   }
 }
